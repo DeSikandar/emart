@@ -1,0 +1,13 @@
+<div class="container">
+
+
+	{% for product in object_list %}
+		<div class="col-xs-3">
+			<br>
+			{% include "products/product_thumbnail.html" with product=product %}
+			<br>
+		</div>
+		
+	{% cycle '' '' '' '' '' '</div></div><hr/><div class="row">' %}
+	{% endfor %}
+
